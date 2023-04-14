@@ -19,13 +19,13 @@ resource "google_compute_backend_service" "default" {
 #  name = "${var.address}"
 #}
 
-#resource "google_compute_managed_ssl_certificate" "lb_default" {
-#  name = "${var.prefix}-cert"
+resource "google_compute_managed_ssl_certificate" "lb_default" {
+  name = "${var.prefix}-cert"
 
-#  managed {
-#    domains = [var.domain_name]
-#  }
-#}
+  managed {
+    domains = [var.domain_name]
+  }
+}
 
 # url map
 resource "google_compute_url_map" "default" {
@@ -37,9 +37,9 @@ resource "google_compute_url_map" "default" {
 resource "google_compute_target_https_proxy" "default" {
   name    = "${var.prefix}-proxy"
   url_map = google_compute_url_map.default.id
-#  ssl_certificates = [
-#    google_compute_managed_ssl_certificate.lb_default.name
-#  ]
+  ssl_certificates = [
+    google_compute_managed_ssl_certificate.lb_default.name
+  ]
 }
 
 # forwarding rule
@@ -53,12 +53,12 @@ resource "google_compute_global_forwarding_rule" "default" {
 }
 
 # create dns A record
-#resource "google_dns_record_set" "a_record" {
-#  project      = var.central_project_id
-#  managed_zone = var.zone_name
+resource "google_dns_record_set" "a_record" {
+  project      = var.central_project_id
+  managed_zone = var.zone_name
 
-#  name    = "${var.domain_name}."
-#  type    = "A"
-#  rrdatas = [google_compute_global_address.default.address]
-#  ttl     = 300
-#}
+  name    = "${var.domain_name}."
+  type    = "A"
+  rrdatas = [google_compute_global_address.default.address]
+  ttl     = 300
+}

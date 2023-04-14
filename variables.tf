@@ -10,13 +10,13 @@ variable "project" {
 #  default = "jo-shared-services-lzzo"
 #}
 
-#variable "domain_name" {
-#  default = "fct2.ninjajon.com"
-#}
+variable "domain_name" {
+  default = "alex.cn.com"
+}
 
-#variable "zone_name" {
-#  default = "ninjajon-com"
-#}
+variable "zone_name" {
+  default = "cn-com"
+}
 
 variable "address" {
   type        = string
