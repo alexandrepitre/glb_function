@@ -10,6 +10,6 @@ variable "neg3_id" {}
 
 variable "project" {}
 
-variable "central_project_id" {}
+#variable "central_project_id" {}
 
 #variable "zone_name" {}
