@@ -6,17 +6,17 @@ variable "project" {
   default = "avian-amulet-378416"
 }
 
-variable "central_project_id" {
-  default = "jo-shared-services-lzzo"
-}
+#variable "central_project_id" {
+#  default = "jo-shared-services-lzzo"
+#}
 
-variable "domain_name" {
-  default = "fct2.ninjajon.com"
-}
+#variable "domain_name" {
+#  default = "fct2.ninjajon.com"
+#}
 
-variable "zone_name" {
-  default = "ninjajon-com"
-}
+#variable "zone_name" {
+#  default = "ninjajon-com"
+#}
 
 variable "address" {
   type        = string

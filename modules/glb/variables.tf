@@ -12,4 +12,4 @@ variable "project" {}
 
 variable "central_project_id" {}
 
-variable "zone_name" {}
+#variable "zone_name" {}
