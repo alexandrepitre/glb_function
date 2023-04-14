@@ -40,9 +40,9 @@ resource "google_compute_url_map" "default" {
 resource "google_compute_target_https_proxy" "default" {
   name    = "${var.prefix}-proxy"
   url_map = google_compute_url_map.default.id
-  ssl_certificates = [
-    google_compute_managed_ssl_certificate.lb_default.name
-  ]
+#  ssl_certificates = [
+#    google_compute_managed_ssl_certificate.lb_default.name
+#  ]
 }
 
 # forwarding rule
