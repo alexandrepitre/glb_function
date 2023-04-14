@@ -12,9 +12,6 @@ resource "google_compute_backend_service" "default" {
     group = var.neg2_id
   }
 
-  backend {
-    group = var.neg3_id
-  }
 }
 
 # global ip

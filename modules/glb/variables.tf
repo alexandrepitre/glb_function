@@ -4,8 +4,6 @@ variable "neg1_id" {}
 
 variable "neg2_id" {}
 
-variable "neg3_id" {}
-
 #variable "domain_name" {}
 
 variable "project" {}

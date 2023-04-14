@@ -20,18 +20,6 @@ module "neg_us_central1" {
   function_name = "function_v1_mtl"
 }
 
-
-module "neg_us_central2" {
-  source = "./modules/neg"
-  providers = {
-    google = google.target
-  }
-  prefix        = var.prefix
-  region        = "us-central2"
-  function_name = "function_v1_mtl"
-}
-
-
 module "glb" {
   source = "./modules/glb"
   providers = {
@@ -40,7 +28,6 @@ module "glb" {
   prefix             = var.prefix
   neg1_id            = module.neg_northamerica_northeast1.neg_id
   neg2_id            = module.neg_us_central1.neg_id
-  neg3_id            = module.neg_us_central2.neg_id
   address            = var.address
   #domain_name        = var.domain_name
   project            = var.project
