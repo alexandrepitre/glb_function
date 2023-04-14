@@ -41,6 +41,7 @@ module "glb" {
   neg1_id            = module.neg_northamerica_northeast1.neg_id
   neg2_id            = module.neg_us_central1.neg_id
   neg3_id            = module.neg_us_central2.neg_id
+  address            = var.address
   #domain_name        = var.domain_name
   project            = var.project
   #central_project_id = var.central_project_id
