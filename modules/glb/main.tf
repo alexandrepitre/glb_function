@@ -15,9 +15,9 @@ resource "google_compute_backend_service" "default" {
 }
 
 # global ip
-# resource "google_compute_global_address" "default" {
-#  name = "${var.address}"
-#}
+ resource "google_compute_global_address" "default" {
+  name = "${var.address}"
+}
 
 resource "google_compute_managed_ssl_certificate" "lb_default" {
   name = "${var.prefix}-cert"
