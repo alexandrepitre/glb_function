@@ -10,6 +10,6 @@ variable "project" {}
 
 variable "address" {}
 
-#variable "central_project_id" {}
+variable "central_project_id" {}
 
 variable "zone_name" {}
