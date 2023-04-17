@@ -54,9 +54,7 @@ resource "google_compute_global_forwarding_rule" "default" {
 
 # create dns A record
 resource "google_dns_record_set" "a_record" {
-  project      = var.central_project_id
   managed_zone = var.zone_name
-
   name    = "${var.domain_name}."
   type    = "A"
   rrdatas = [google_compute_global_address.default.address]

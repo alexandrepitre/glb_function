@@ -6,9 +6,9 @@ variable "project" {
   default = "avian-amulet-378416"
 }
 
-variable "central_project_id" {
-  default = "central_project_id"
-}
+#variable "central_project_id" {
+#  default = "central_project_id"
+#}
 
 variable "domain_name" {
   default = "alex.cn.com"
