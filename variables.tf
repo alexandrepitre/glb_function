@@ -18,7 +18,7 @@ variable "zone_name" {
   default = "cn-com"
 }
 
-variable "address" {
+variable "ip_name" {
   type        = string
   description = "Existing IPv4 address to use (the actual IP address value)"
   default     = "global-appserver-ip"

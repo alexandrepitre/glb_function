@@ -16,7 +16,7 @@ resource "google_compute_backend_service" "default" {
 
 # global ip
  resource "google_compute_global_address" "default" {
-  name = "${var.address}"
+  name = "${var.ip_name}"
 }
 
 resource "google_compute_managed_ssl_certificate" "lb_default" {
@@ -49,7 +49,7 @@ resource "google_compute_global_forwarding_rule" "default" {
   load_balancing_scheme = "EXTERNAL_MANAGED"
   port_range            = "443"
   target                = google_compute_target_https_proxy.default.id
-  ip_address            = "${var.address}"
+  ip_address            = google_compute_global_address.default.address
 }
 
 # create dns A record

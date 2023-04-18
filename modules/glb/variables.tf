@@ -8,7 +8,7 @@ variable "domain_name" {}
 
 variable "project" {}
 
-variable "address" {}
+variable "ip_name" {}
 
 #variable "central_project_id" {}
 
