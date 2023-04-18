@@ -31,6 +31,6 @@ module "glb" {
   ip_name            = var.ip_name
   domain_name        = var.domain_name
   project            = var.project
-  #central_project_id = var.central_project_id
+  ##central_project_id = var.central_project_id
   zone_name          = var.zone_name
 }

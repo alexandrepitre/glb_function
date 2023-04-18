@@ -52,7 +52,7 @@ resource "google_compute_global_forwarding_rule" "default" {
   ip_address            = google_compute_global_address.default.id
 }
 
-# create dns A record
+## create dns A record
 resource "google_dns_record_set" "a_record" {
   managed_zone = var.zone_name
   name    = "${var.domain_name}."
